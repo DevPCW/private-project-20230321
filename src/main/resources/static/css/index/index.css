@@ -1,0 +1,258 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-between;
+
+    height: 1080px;
+}
+
+main {
+    background-image: url(/static/images/programmer-index.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: initial;
+    height: 1080px;
+}
+
+.main-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 600px;
+
+    margin-bottom: 100px;
+}
+  
+.main-title-container span {
+    color: black;
+    font-size: 25px;
+
+    padding-bottom: 10px;
+}
+  
+.main-title-container h1 {
+    margin-top: 10px;
+  
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
+
+    padding-bottom: 30px;
+}
+
+.main-index-menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-menu-button {
+    width: 200px;
+    height: 40px;
+    background-color: rgba(2, 2, 2, 0.5);
+
+    border: 1px solid black;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main-search-container {
+    padding-top: 100px;
+    width: 100%;
+}
+  
+.main-search-border {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 20px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(240, 240, 240);
+
+    border-radius: 8px;
+    
+    border: 1px solid black;
+}
+
+.search-type-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #121212;
+}
+
+.search-input {
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+    width: 70%;
+    height: 30px;
+
+    font-size: 20px;
+    text-align: center;
+
+    background-color: rgb(240, 240, 240);
+}
+
+.search-button {
+    border: none;
+    background-color: #ffffff00;
+
+    cursor: pointer;
+}
+
+.search-button .fa-magnifying-glass {
+    font-size: 20px;
+}
+
+aside {
+    background-image: url(/static/images/main-recent.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: initial;
+    height: 640px;
+
+    border-top: 1px solid black;
+}
+
+.main-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+
+    height: 640px;
+}
+
+
+.main-posting-recently {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 400px;
+
+    background-color: #dbdbdb;
+    opacity: 0.9;
+}
+
+.main-posting-recently h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+
+    font-size: 35px;
+    font-weight: 600;
+
+}
+
+.main-posting-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1000px;
+    height: 300px;
+}
+
+.main-posting-image-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-posting-image-area h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    width: 100%;
+    height: 150px;
+
+    background-color: white;
+
+    border: 1px solid black;
+}
+
+.main-posting-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+
+}
+
+.main-posting-title h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+
+    width: 100%;
+    height: 80px;
+
+    background-color: #dbdbdb;
+
+    padding: 15px;
+
+    line-height: 25px;
+}
+
+#index-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 250px;
+
+    background-color: white;
+
+    border-top: 1px solid black;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 200px;
+}
+
+.index-up-button {
+    width: 200px;
+    height: 40px;
+    background-color: rgba(2, 2, 2, 0.5);
+
+    border: 1px solid black;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
