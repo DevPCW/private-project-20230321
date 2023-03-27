@@ -1,0 +1,148 @@
+.main-account-container {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100vh;
+}
+
+main {
+    background-image: url(/static/images/login.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+  
+    padding: 40px 100px;
+    width: 450px;
+    height: 420px;
+
+    border: 1px solid black;
+  
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+.login-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.login-group {
+    display: flex;
+    flex-direction: column;
+  
+    margin-bottom: 15px;
+    width: 350px;
+}
+
+.login-group label {
+    margin-bottom: 5px;
+}
+  
+.login-inputs {
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+
+    border: 1px solid black;
+}
+
+.login-error {
+    font-size: 12px;
+    color: red;
+}
+  
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 350px;
+}
+
+.button-group button {
+    margin-bottom: 10px;
+    width: 100%;
+    font-weight: 600;
+}
+
+.login-submit {
+    height: 45px;
+
+    font-size: 18px;
+    color: black;
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+.kakao-login {
+    color: rgb(0, 0, 0);
+    background-color: #fff82c;
+    border: 1px solid #000000;
+}
+
+.button-group-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+}
+
+.footer-button {
+    color: #002f6c;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 0;
+
+    width: 110px;
+    height: 35px;
+
+    border: 1px solid #000000;
+}
+
+
+
+#index-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 250px;
+
+    background-color: white;
+
+    border-top: 1px solid black;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 200px;
+}
+
+.index-up-button {
+    width: 200px;
+    height: 40px;
+    background-color: rgba(2, 2, 2, 0.5);
+
+    border: 1px solid black;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}

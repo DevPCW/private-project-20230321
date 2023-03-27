@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPCW</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/account/login.css" />
+</head>
+
+<body>
+    <div id="container">
+        <header class="header-container">
+            <div class="logo-container">
+                <h1 class="brand-logo"><a href="javascript:void(0);" class="logo-button">DevPCW</a></h1>
+            </div>
+            <ul class="menu-container">
+                <li><a href="javascript:void(0);" class="menu-container-nav">프로필</a></li>
+                <li><a href="javascript:void(0);" class="menu-container-nav">코딩</a></li>
+                <li><a href="javascript:void(0);" class="menu-container-nav">취미</a></li>
+                <li><a href="javascript:void(0);" class="menu-container-nav">Q&A</a></li>
+                <li><a href="javascript:void(0);" class="menu-container-nav">후원</a></li>
+            </ul>
+
+            <ul class="header-info">
+                <li><a href="javascript:void(0);" class="info-container-nav">로그인</a></li>
+                <li><a href="javascript:void(0);" class="info-container-nav">마이페이지</a></li>
+            </ul>
+
+            <div class="sns-container">
+                <button class="sns-button" disabled>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-solid fa-t"></i>
+                    <i class="fa-brands fa-github"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-account-container">
+            <form action="" method="post">
+                <div class="login-container">
+                    <h1 class="login-title">L O G I N</h1>
+                    <div class="login-group">
+                        <label for="login-username"></label>
+                        <input type="text" id="login-username" class="login-inputs" name="username"
+                            placeholder="아이디를 입력하세요" required>
+                    </div>
+
+                    <div class="login-group">
+                        <label for="login-password"></label>
+                        <input type="password" id="login-password" class="login-inputs" name="password"
+                            placeholder="비밀번호를 입력하세요" required>
+                    </div>
+
+                    <div class="login-error">
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="login-submit">로그인</button>
+                        <button type="button" class="kakao-login">카카오 로그인</button>
+                    </div>
+
+                    <div class="button-group-footer">
+                        <button type="button" class="footer-button register-button"
+                            onclick="location.href='/account/register'">회원가입</button>
+                        <button type="button" class="footer-button search-email">아이디 찾기</button>
+                        <button type="button" class="footer-button search-password">비밀번호 찾기</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <footer id="index-footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h1 class="brand-logo"><a href="javascript:void(0);" class="logo-button">DevPCW</a></h1>
+                </div>
+
+                <div class="footer-email">
+                    <h1>rorndksk123@naver.com</h1>
+                </div>
+                
+                <div class="footer-phone">
+                    <h1>010-4082-7825</h1>
+                </div>
+
+                <button type="button" class="index-up-button">맨 위로 가기</button>
+            </div>
+        </footer>
+    </div>
+</body>
