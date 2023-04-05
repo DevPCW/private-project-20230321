@@ -5,6 +5,7 @@ import com.study.devpcw.exception.CustomValidationException;
 import com.study.devpcw.repository.AccountRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -16,6 +17,13 @@ public class AccountService {
 
     @Autowired
     private AccountRepository accountRepository;
+
+    public UserMst registerUser(UserMst userMst) {
+        userMst.setPassword(new BCryptPasswordEncoder().encode(userMst.getPassword()));
+        accountRepository.saveUser(userMst);
+        accountRepository.saveRole(userMst);
+        return userMst;
+    }
 
     public void duplicateUsername(String username) {
         UserMst user = accountRepository.findUserByUsername(username);

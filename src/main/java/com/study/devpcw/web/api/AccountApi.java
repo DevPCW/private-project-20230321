@@ -1,5 +1,6 @@
 package com.study.devpcw.web.api;
 
+import com.study.devpcw.aop.annotation.ValidAspect;
 import com.study.devpcw.entity.UserMst;
 import com.study.devpcw.security.PrincipalDetails;
 import com.study.devpcw.service.AccountService;
@@ -9,10 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
 
 @Slf4j
 @RestController
@@ -22,6 +24,20 @@ public class AccountApi {
 
     @Autowired
     private AccountService accountService;
+
+    @ValidAspect
+    @PostMapping("/register")
+    public ResponseEntity<? extends CMRespDto<?extends UserMst>> register(@RequestBody @Valid UserMst userMst, BindingResult bindingResult) {
+
+        accountService.duplicateUsername(userMst.getUsername());
+        accountService.compareToPassword(userMst.getPassword(), userMst.getRepassword());
+
+        UserMst user = accountService.registerUser(userMst);
+
+        return ResponseEntity
+                .created(URI.create("/api/account/user" + user.getUserId()))
+                .body(new CMRespDto<>(HttpStatus.CREATED.value(), "Create New User", user));
+    }
 
 
     @GetMapping("/user/{userId}")

@@ -29,19 +29,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    public void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.httpBasic().disable();
         http.authorizeRequests()
                 .antMatchers("/mypage/**", "/security/**")
-                .authenticated()
+                .fullyAuthenticated()
                 .anyRequest()
                 .permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/account/login")
-                .loginProcessingUrl("account/login")
-                .failureUrl("/index")
-                .defaultSuccessUrl("/index");
+                .loginPage("/account/login") // 로그인 페이지 get요청
+                .loginProcessingUrl("/account/login") // 로그인 인증 post 요청
+                .defaultSuccessUrl("/index")
+                .failureUrl("/account/login-fail");
+        //.and()
     }
 }
